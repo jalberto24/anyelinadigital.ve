@@ -102,5 +102,22 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <script>
+    // Limpiador agresivo de marca de agua
+    const cleanBehold = () => {
+        // Busca enlaces que apunten a behold.so
+        const links = document.querySelectorAll('a[href*="behold.so"]');
+        links.forEach(link => {
+            link.style.display = 'none';
+            link.style.opacity = '0';
+            link.style.pointerEvents = 'none';
+            link.remove(); // Intenta eliminarlo del todo
+        });
+    };
+
+    // Ejecuta la limpieza varias veces para atrapar el script cuando cargue
+    setInterval(cleanBehold, 500); 
+</script>
 </body>
 </html>

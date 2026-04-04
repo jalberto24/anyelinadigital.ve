@@ -143,3 +143,13 @@ footer { background: var(--dark-purple); color: white; padding: 60px 0 30px; tex
     .nav-links, .social-sidebar { display: none; }
     .message { font-size: 1.5rem; }
 }
+/* Ocultar el contenedor y el enlace por proximidad */
+div[data-behold-id] ~ a, 
+div[data-behold-id] + a,
+.behold-branding {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    position: absolute !important;
+}
