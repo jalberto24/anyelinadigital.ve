@@ -178,3 +178,19 @@ footer { background: var(--dark-purple); color: white; padding: 60px 0 30px; }
     .input-group { grid-template-columns: 1fr; }
     .whatsapp-float span { display: none; }
 }
+/* Ocultar el logo de "Made with Behold" */
+div[data-behold-id] + a, 
+.behold-branding,
+#behold-logo {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* En caso de que Behold use un contenedor específico para el link */
+#galeria a[href*="behold.so"] {
+    display: none !important;
+}
