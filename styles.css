@@ -93,16 +93,6 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     text-decoration: none; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s;
 }
 
-/* --- SECCIÓN GALERÍA --- */
-.section-title { 
-    text-align: center; 
-    color: var(--dark-purple); 
-    margin: 45px 0 25px; 
-    text-transform: uppercase; 
-    letter-spacing: 4px; 
-    font-size: 1.2rem; 
-}
-
 /* --- TRUCO PARA ELIMINAR BRANDING DE BEHOLD --- */
 .behold-wrapper { position: relative; padding-bottom: 20px; }
 
@@ -118,6 +108,17 @@ a[href*="behold.so"],
     position: absolute !important;
     left: -9999px !important;
 }
+
+/* --- SECCIÓN GALERÍA --- */
+.section-title { 
+    text-align: center; 
+    color: var(--dark-purple); 
+    margin: 45px 0 25px; 
+    text-transform: uppercase; 
+    letter-spacing: 4px; 
+    font-size: 1.2rem; 
+}
+
 
 /* --- CONTACTO --- */
 .split-container { display: grid; grid-template-columns: 1.6fr 1fr; gap: 30px; margin: 40px 0 80px; }
