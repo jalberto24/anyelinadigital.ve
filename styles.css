@@ -153,3 +153,12 @@ div[data-behold-id] + a,
     opacity: 0 !important;
     position: absolute !important;
 }
+
+/* Intenta ocultar el elemento por su etiqueta personalizada si existe */
+behold-widget a, 
+.behold-branding, 
+#behold-logo {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}

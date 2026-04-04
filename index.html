@@ -46,13 +46,48 @@
             </div>
         </section>
 
-        <section id="galeria">
+        <!-- <section id="galeria">
             <h2 class="section-title">Nuestra Estética en Instagram</h2>
             <div class="container behold-wrapper">
                 <div data-behold-id="3s1awxzVDs7px0MuJFrL"></div>
                 <script src="https://w.behold.so/widget.js" type="module"></script>
             </div>
+        </section> -->
+        <section id="galeria">
+            <h2 class="section-title">Nuestra Estética en Instagram</h2>
+            <div class="container" id="behold-container">
+                <div data-behold-id="3s1awxzVDs7px0MuJFrL"></div>
+                <script src="https://w.behold.so/widget.js" type="module"></script>
+
+                <script>
+                    const removeBeholdBranding = () => {
+                        // 1. Intenta borrarlo si está en el DOM normal
+                        document.querySelectorAll('a[href*="behold.so"]').forEach(el => el.remove());
+
+                        // 2. Intenta entrar al Shadow DOM (donde se esconde el logo)
+                        const widget = document.querySelector('behold-widget');
+                        if (widget && widget.shadowRoot) {
+                            const branding = widget.shadowRoot.querySelector('a[href*="behold.so"]') || 
+                                            widget.shadowRoot.querySelector('.behold-branding');
+                            if (branding) branding.remove();
+                        }
+                    };
+
+                    // Ejecutar continuamente para asegurar que no reaparezca
+                    setInterval(removeBeholdBranding, 300);
+                </script>
+            </div>
         </section>
+
+
+
+
+
+
+
+
+
+
 
         <section id="contacto-mixto" class="container">
             <div class="split-container">
@@ -72,7 +107,8 @@
                 <div class="x-feed-container">
                     <h3>Comunidad en X</h3>
                     <div class="x-timeline">
-                        <a class="twitter-timeline" data-height="400" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/anyelinadigitalve">Tweets by anyelinadigitalve</a> 
+                        <!-- <a class="twitter-timeline" data-height="400" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/anyelinadigitalve">Tweets by anyelinadigitalve</a  -->
+                        <a class="twitter-timeline" href="https://twitter.com/jalberto24?ref_src=twsrc%5Etfw">Tweets by jalberto24</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
@@ -102,7 +138,7 @@
     </footer>
 
     <script src="script.js"></script>
-    
+
     <script>
     // Limpiador agresivo de marca de agua
     const cleanBehold = () => {
