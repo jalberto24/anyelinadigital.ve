@@ -1,3 +1,4 @@
+/* --- ESTILOS BASE --- */
 :root {
     --brand-pink: #d656ae;
     --dark-purple: #2d1d32;
@@ -21,7 +22,7 @@ body {
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* --- HEADER & LOGO --- */
+/* --- HEADER --- */
 header {
     background: var(--white);
     border-bottom: 1px solid var(--light-gray);
@@ -30,11 +31,9 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 nav { display: flex; justify-content: space-between; align-items: center; }
 .logo-container { max-width: 190px; }
 .main-logo { width: 100%; height: auto; display: block; }
-
 .nav-links { display: flex; list-style: none; }
 .nav-links li a { 
     text-decoration: none; 
@@ -48,24 +47,19 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 }
 .nav-links li a:hover { color: var(--brand-pink); }
 
-/* --- CINTILLO SLOGAN (ESTILIZADO Y REDUCIDO) --- */
+/* --- SLOGAN CAROUSEL --- */
 #highlights {
     background-color: var(--dark-purple);
-    padding: 60px 0; /* Altura reducida para mayor elegancia */
+    padding: 60px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 120px; /* Altura mínima controlada */
+    min-height: 120px;
 }
-
-.carousel {
-    position: relative;
-    width: 100%;
-}
-
+.carousel { position: relative; width: 100%; }
 .message {
     position: absolute;
     top: 50%;
@@ -73,7 +67,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     transform: translate(-50%, -50%);
     width: 90%;
     font-family: var(--font-serif);
-    font-size: 2.9rem; /* Tamaño optimizado */
+    font-size: 2.2rem;
     color: var(--white);
     font-style: italic;
     opacity: 0;
@@ -81,50 +75,25 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     filter: blur(8px);
     transition: opacity 1.5s ease, filter 1.5s ease;
 }
+.message.active { opacity: 1; visibility: visible; filter: blur(0px); }
 
-.message.active {
-    opacity: 1;
-    visibility: visible;
-    filter: blur(0px);
-}
-
-/* Línea de luz sutil */
-#highlights::after {
-    content: ''; 
-    position: absolute; 
-    bottom: 15%; 
-    left: -100%; 
-    width: 40%; 
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--brand-pink), transparent);
-    animation: lightPass 8s infinite;
-    opacity: 0.3;
-}
-@keyframes lightPass { 0% { left: -100%; } 100% { left: 200%; } }
-
-/* --- REDES SOCIALES FLOTANTES --- */
+/* --- REDES SOCIALES --- */
 .social-sidebar { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 2000; }
 .social-sidebar a {
     width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
     color: white; text-decoration: none; background: var(--brand-pink); transition: 0.4s ease; font-size: 1.1rem;
 }
 .social-sidebar a:hover { width: 55px; }
-
-/* Colores originales al pasar el mouse */
 .icon-ig:hover { background: #E1306C !important; }
 .icon-fb:hover { background: #4267B2 !important; }
-.icon-x:hover { background: #000000 !important; }
-.icon-tg:hover { background: #0088cc !important; }
-.icon-li:hover { background: #0077b5 !important; }
 
 .whatsapp-float {
     position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white;
     padding: 12px 22px; border-radius: 50px; display: flex; align-items: center;
     text-decoration: none; z-index: 2000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s;
 }
-.whatsapp-float:hover { transform: scale(1.05); }
 
-/* --- SECCIONES Y GALERÍA --- */
+/* --- SECCIÓN GALERÍA --- */
 .section-title { 
     text-align: center; 
     color: var(--dark-purple); 
@@ -133,64 +102,43 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     letter-spacing: 4px; 
     font-size: 1.2rem; 
 }
-.instagram-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 50px; }
 
-/* --- CONTACTO DIVIDIDO (COTIZACIÓN + X) --- */
-.split-container { display: grid; grid-template-columns: 1.6fr 1fr; gap: 30px; margin: 40px 0 80px; align-items: stretch; }
-.form-card-split { background: #fcfcfc; padding: 45px; border: 1px solid var(--light-gray); border-radius: 8px; }
-.x-feed-container { background: white; padding: 25px; border: 1px solid var(--light-gray); border-radius: 8px; max-height: 500px; overflow: hidden; }
+/* --- TRUCO PARA ELIMINAR BRANDING DE BEHOLD --- */
+.behold-wrapper { position: relative; padding-bottom: 20px; }
 
-.x-feed-container h3 { 
-    font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--brand-pink); 
-    margin-bottom: 15px; border-bottom: 1px solid var(--light-gray); padding-bottom: 10px; 
-}
-
-input, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid var(--light-gray); border-radius: 4px; font-family: var(--font-sans); }
-.input-group { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-
-.btn-dark { 
-    background: var(--brand-pink); color: white; border: none; padding: 18px; 
-    width: 100%; border-radius: 4px; font-weight: 700; cursor: pointer; 
-    transition: 0.3s; text-transform: uppercase; 
-}
-.btn-dark:hover { background: var(--dark-purple); transform: translateY(-2px); }
-
-/* --- FOOTER CENTRADO --- */
-footer { background: var(--dark-purple); color: white; padding: 60px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: center; }
-.footer-info h3, .footer-social h3 { color: var(--brand-pink); margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; }
-
-.social-icons a { color: white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
-.social-icons a:hover { color: var(--brand-pink); }
-
-.footer-bottom { 
-    border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; 
-    margin-top: 40px; text-align: center; font-size: 1.0rem; opacity: 0.6; 
-}
-
-/* --- RESPONSIVIDAD (MÓVILES) --- */
-@media (max-width: 992px) {
-    .instagram-grid, .split-container, .footer-grid { grid-template-columns: 1fr; }
-    #highlights { padding: 40px 0; min-height: 120px; }
-    .message { font-size: 1.2rem; }
-    .nav-links { display: none; }
-    .social-sidebar { display: none; }
-    .input-group { grid-template-columns: 1fr; }
-    .whatsapp-float span { display: none; }
-}
-/* Ocultar el logo de "Made with Behold" */
+/* Oculta cualquier enlace que contenga 'behold.so' que aparezca dentro o después del widget */
 div[data-behold-id] + a, 
-.behold-branding,
+a[href*="behold.so"], 
+.behold-branding, 
 #behold-logo {
     display: none !important;
     visibility: hidden !important;
-    height: 0 !important;
-    width: 0 !important;
     opacity: 0 !important;
     pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
 }
 
-/* En caso de que Behold use un contenedor específico para el link */
-#galeria a[href*="behold.so"] {
-    display: none !important;
+/* --- CONTACTO --- */
+.split-container { display: grid; grid-template-columns: 1.6fr 1fr; gap: 30px; margin: 40px 0 80px; }
+.form-card-split { background: #fcfcfc; padding: 45px; border: 1px solid var(--light-gray); border-radius: 8px; }
+.x-feed-container { background: white; padding: 25px; border: 1px solid var(--light-gray); border-radius: 8px; }
+
+input, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid var(--light-gray); border-radius: 4px; }
+.btn-dark { 
+    background: var(--brand-pink); color: white; border: none; padding: 18px; 
+    width: 100%; border-radius: 4px; font-weight: 700; cursor: pointer; transition: 0.3s; 
+}
+.btn-dark:hover { background: var(--dark-purple); }
+
+/* --- FOOTER --- */
+footer { background: var(--dark-purple); color: white; padding: 60px 0 30px; text-align: center; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.social-icons a { color: white; font-size: 1.5rem; margin: 0 10px; }
+.footer-bottom { margin-top: 40px; opacity: 0.6; font-size: 0.9rem; }
+
+@media (max-width: 992px) {
+    .split-container, .footer-grid { grid-template-columns: 1fr; }
+    .nav-links, .social-sidebar { display: none; }
+    .message { font-size: 1.5rem; }
 }
