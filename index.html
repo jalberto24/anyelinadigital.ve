@@ -10,14 +10,27 @@
 </head>
 <body>
 
-    <div class="social-sidebar">
+    <!-- <div class="social-sidebar">
         <a href="https://www.instagram.com/anyelinadigital.ve/" class="icon-ig" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/people/Anyelina-digital/61576639120709/" class="icon-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <!-- <a href="#" class="icon-x" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> -->
+        <a href="#" class="icon-x" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="mailto:digitalvibes.ve@gmail.com" class="icon-gm" target="_blank" style="background: #d656ae;"><i class="fas fa-envelope"></i></a>
         <a href="https://t.me/anyelinadigital" class="icon-tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         <a href="#" class="icon-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div> -->
+
+    <div class="social-sidebar">
+        <a href="https://www.instagram.com/anyelinadigital.ve/" class="icon-ig" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/Anyelina-digital/61576639120709/" class="icon-fb" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@anyelinatiapa" class="icon-tt" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="mailto:digitalvibes.ve@gmail.com" class="icon-gm" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="https://t.me/anyelinadigital" class="icon-tg" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="icon-x" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/tu-perfil/" class="icon-li" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
+
+
+
 
     <a href="https://wa.me/584120253955" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
@@ -89,7 +102,7 @@
 
 
 
-        <section id="contacto-mixto" class="container">
+        <!-- <section id="contacto-mixto" class="container">
             <div class="split-container">
                 <div class="form-card-split">
                     <h2>Solicitud de Cotización</h2>
@@ -107,10 +120,45 @@
                 <div class="x-feed-container">
                     <h3>Comunidad en X</h3>
                     <div class="x-timeline">
-                        <!-- <a class="twitter-timeline" data-height="400" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/anyelinadigitalve">Tweets by anyelinadigitalve</a  -->
-                        <!-- <a class="twitter-timeline" href="https://twitter.com/jalberto24?ref_src=twsrc%5Etfw">Tweets by jalberto24</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                            <a class="twitter-timeline" data-lang="es" data-dnt="true" href="https://twitter.com/jalberto24?ref_src=twsrc%5Etfw">Tweets by jalberto24</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section id="contacto-mixto" class="container">
+            <div class="split-container">
+                <div class="form-card-split">
+                    <h2>Solicitud de Cotización</h2>
+                    <p>Cuéntanos sobre tu proyecto y hagámoslo realidad.</p>
+                    
+                    <form id="quote-form" action="https://formspree.io/f/meepprnd" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="nombre" placeholder="Nombre" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
 
-                        <a class="twitter-timeline" href="https://twitter.com/jalberto24?ref_src=twsrc%5Etfw">Tweets by jalberto24</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <div class="select-wrapper">
+                            <select name="paquete" required>
+                                <option value="" disabled selected>Selecciona un paquete</option>
+                                <option value="branding-basico">Branding Básico</option>
+                                <option value="gestion-rrss">Gestión de Redes Sociales</option>
+                                <option value="diseno-web">Diseño Web Pro</option>
+                                <option value="contenido-audiovisual">Contenido Audiovisual</option>
+                                <option value="estrategia-integral">Estrategia Integral</option>
+                            </select>
+                        </div>
+
+                        <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" rows="5" required></textarea>
+                        
+                        <button type="submit" class="btn-dark">Enviar Mensaje</button>
+                        <div id="form-status"></div> </form>
+                </div>
+
+                <div class="x-feed-container">
+                    <h3>Comunidad en X</h3>
+                    <div class="x-timeline">
+                        <a class="twitter-timeline" data-height="400" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/anyelinadigitalve">Tweets by anyelinadigitalve</a> 
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
